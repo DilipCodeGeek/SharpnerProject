@@ -1,29 +1,16 @@
-// Write the code as shown in the video below:
-const mainHeading = document.querySelector("#main-heading");
-mainHeading.style.textAlign = "center";
+// Write your code below:
+const divs = document.getElementsByTagName("div");
+const firstDiv = divs[0];
+const subHeadingElement = document.createElement("h3");
+const subHeading = document.createTextNode("Buy high quality organic fruits online");
 
-const fruits = document.querySelector(".fruits");
-fruits.style.backgroundColor = "grey";
-fruits.style.padding = "30px";
-fruits.style.margin = "30px";
-fruits.style.width = "50%";
-fruits.style.borderRadius = "5px";
-fruits.style.listStyleType = "none";
+subHeadingElement.appendChild(subHeading);
+firstDiv.appendChild(subHeadingElement);
+subHeadingElement.style.fontStyle = "italic";
 
-const basketHeading = document.querySelector("#basket-heading");
-basketHeading.style.marginLeft = "30px";
-
-const fruitItems = document.querySelectorAll(".fruit");
-for (let i = 0; i < fruitItems.length; i++){
-    fruitItems[i].style.backgroundColor = "white";
-    fruitItems[i].style.padding = "10px";
-    fruitItems[i].style.margin = "10px";
-    fruitItems[i].style.borderRadius = "5px";
-}
-// Write answer to the questions asked below:
-basketHeading.style.color = "brown";
-const evenFruitItems = document.querySelectorAll(".fruit:nth-child(even)");
-for (let i = 0; i < evenFruitItems.length; i++){
-    evenFruitItems[i].style.backgroundColor = "brown";
-    evenFruitItems[i].style.color = "white";
-}
+const secondDiv = divs[1];
+const paragraphElement = document.createElement("p");
+const paragraphText = document.createTextNode("Total fruits: 4");
+paragraphElement.appendChild(paragraphText);
+secondDiv.children[0].appendChild(paragraphElement);
+paragraphElement.setAttribute("id", "fruits-total");
