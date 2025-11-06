@@ -65,12 +65,19 @@ function displayUserOnScreen(userDetails) {
       .catch((error) => console.log("Error deleting user:", error));
   });
 
-  editBtn.addEventListener("click", function (event) {
-    userList.removeChild(event.target.parentElement);
-    localStorage.removeItem(userDetails.email);
+editBtn.addEventListener("click", function (event) {
     document.getElementById("username").value = userDetails.username;
     document.getElementById("email").value = userDetails.email;
     document.getElementById("phone").value = userDetails.phone;
+
+    axios
+      .delete(
+        `https://crudcrud.com/api/d6d70c000d2240e2ae25ec20fd415ef5/appointmentData/${userDetails._id}`
+      )
+      .then(() => {
+        userList.removeChild(event.target.parentElement);
+      })
+      .catch((error) => console.log(error));
   });
 }
 
