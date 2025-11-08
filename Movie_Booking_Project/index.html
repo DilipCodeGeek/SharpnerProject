@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie Booking</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header Section -->
+    <header>
+      <h1 id="app-title">Movie Booking</h1>
+
+      <div id="booking-summary">
+        <p>Total Booked: <span id="total-booked">0</span></p>
+      </div>
+
+      <div id="find-slot-section">
+        <label for="find-slot">Find Slot:</label>
+        <input
+          type="text"
+          id="find-slot"
+          name="findSlot"
+          placeholder="Enter Seat Number"
+          autocomplete="off"
+        />
+      </div>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+      <form id="booking-form">
+        <div>
+          <label for="user-name">User Name:</label>
+          <input
+            type="text"
+            id="user-name"
+            name="userName"
+            placeholder="Enter User Name"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="seat-number">Seat Number:</label>
+          <input
+            type="number"
+            id="seat-number"
+            name="seatNumber"
+            placeholder="Enter Seat Number"
+            required
+            min="1"
+          />
+        </div>
+
+        <div>
+          <button type="submit" id="add-btn">Add</button>
+        </div>
+      </form>
+
+      <div id="booking-list-section">
+        <ul id="booking-list">
+          <!-- Dynamic items will appear here -->
+        </ul>
+      </div>
+    </main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+

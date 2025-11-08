@@ -1,0 +1,125 @@
+/* General page layout */
+body {
+  background-color: #f7f7f7;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* Main container box */
+.app-container {
+  width: 400px;
+  margin: 40px auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Header section */
+header {
+  background-color: #e6e6e6; /* Light gray */
+  padding: 20px;
+}
+
+header h1 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+#booking-summary {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+#find-slot {
+  padding: 6px;
+  width: 80%;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+/* Main section */
+main {
+  background-color: #fff8e7; /* Cream */
+  padding: 20px;
+  text-align: left;
+}
+
+form div {
+  margin-bottom: 12px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+}
+
+/* Add button */
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#booking-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+#booking-list li {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin-bottom: 8px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+
+/* Edit button */
+.edit-btn {
+  margin-left: 10px;
+  background-color: lightgreen;
+  color: black;
+  border: 1px solid green;
+  padding: 4px 8px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* Delete button */
+.delete-btn {
+  margin-left: 5px;
+  background-color: lightcoral;
+  color: black;
+  border: 1px solid red;
+  padding: 4px 8px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* Simple hover effect */
+.edit-btn:hover {
+  background-color: #9be89b;
+}
+
+.delete-btn:hover {
+  background-color: #f28b82;
+}
